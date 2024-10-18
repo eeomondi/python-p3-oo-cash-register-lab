@@ -1,7 +1,7 @@
 class CashRegister:
-    def __init__(self):
+    def __init__(self, discount=0):
         self.total = 0
-        self.discount = 0
+        self.discount = discount  # Accept discount during initialization
         self.last_transaction = 0
 
     def add_item(self, price, quantity=1):
@@ -18,5 +18,5 @@ class CashRegister:
 
     def void_last_transaction(self):
         self.total -= self.last_transaction
-        self.last_transaction = 0  
+        self.last_transaction = 0  # Reset last transaction after voiding
 
