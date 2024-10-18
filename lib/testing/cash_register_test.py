@@ -6,6 +6,11 @@ import io
 import sys
 
 class TestCashRegister:
+    def test_initialization(self):
+        register = CashRegister()
+        assert register.total == 0
+        assert register.discount == 0
+        assert register.last_transaction == 0
     '''CashRegister in cash_register.py'''
 
     cash_register = CashRegister()
